@@ -1,0 +1,1 @@
+export const BaseUrl="https://vchatting-app.onrender.com/api/";

@@ -21,7 +21,7 @@ import ScrollableChat from "./UsersSideDrawer/ScrollableChat";
 
 //socket code start
 import io from 'socket.io-client';
-const ENDPOINT="http://localhost:5000";
+const ENDPOINT="https://vchatting-app.onrender.com";
 var socket,selectedChatCompare;
 //socket code end
 

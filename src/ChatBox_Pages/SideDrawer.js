@@ -5,7 +5,7 @@ import { BellIcon, ChevronDownIcon} from '@chakra-ui/icons'
 import { ContextState } from '../Context/ChatProvider';
 import ProfileModal from './ProfileModal';
 import { useNavigate } from 'react-router-dom';
-import { BaseUrl } from "../config/Baseurl"
+import { BaseUrl } from "../config/Baseurl";
 import {
   Drawer,
   DrawerBody,
@@ -79,7 +79,7 @@ const SideDrawer =() => {
           Authorization:`Bearer ${user.token}`
         }
       }
-     const {data}=await axios.post(`{$BaseUrl}chat`,
+     const {data}=await axios.post(`${BaseUrl}chat`,
       {userId:userId},config
      )
     //Not understand 
@@ -89,6 +89,7 @@ const SideDrawer =() => {
      setLoadingChat(false);
      onClose(); 
     } catch (error) {
+      console.log("Error in fetching chat!",error);
       toast({
         title:"Error in fetching chat!",
         status:"error",
